@@ -45,10 +45,10 @@ const News =(props)=> {
     // setPage(page+1)
     props.setProgress(100);
   }
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    updateNews();
-  }, [])
+    // updateNews();
+  }, [updateNews])
   
 
   // const handleNext = async () => {
