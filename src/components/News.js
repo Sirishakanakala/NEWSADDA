@@ -20,9 +20,7 @@ const News =(props)=> {
   const fetchMoreData = async () => {
     // setState({page : page +1})
     setPage(page+1)
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${
-      page
-    }&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     let data = await fetch(url);
     let parsedata = await data.json();
     // console.log(parsedata);
@@ -50,7 +48,6 @@ const News =(props)=> {
     updateNews();
   }, [])
   
-
   // const handleNext = async () => {
   //   setPage(page+1)
   //   updateNews()
